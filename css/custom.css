@@ -1,3 +1,7 @@
+*, h1,h2,h3,h4,h5,h6 {
+	color:#b2b2b2;
+	font-family:'Raleway';
+}
 html, body {
 	height:100%;
 	background:#1c1c1c;
@@ -37,6 +41,32 @@ ul li a {
 	color:#fff;
 	font-size:.9em;
 	text-transform:uppercase;
+}
+
+/* Flexboxes */
+.flexbox-wrap {
+	display:flex;
+	flex-flow: row wrap;
+	width:100%;
+}
+.flexbox-wrap .item {
+	text-align: center;
+	vertical-align: middle;
+	flex-grow: 1;
+	width: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Boxes */
+.box-hover {
+	transition: all 2s;
+}
+.box-hover:hover {
+	transition: all 2s;
+	background: #b2b2b2; 
+	color: #1c1c1c;
+	font-weight: bold;
 }
 
 header div:nth-child(1) {
