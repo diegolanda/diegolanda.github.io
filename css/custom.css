@@ -11,6 +11,13 @@ a:hover {
 	color:gray;
 }
 
+.item .job_title {
+	font-size: 1em;
+	font-variant: small-caps;
+	text-align: center;
+}
+
+/* Flexboxes */
 header {
 	display:flex;
 	background:#000;
@@ -23,27 +30,29 @@ header {
 	flex-grow:1;
 }
 
-ul {
+
+#menu ul {
 	list-style-type:none;
 	display:flex;
 	flex-flow: row wrap;
 	width:400px;
-	margin:0;padding:0;
+	margin:0;
+	padding:0;
+	
 }
 
-ul li {
+#menu ul li {
 	flex-grow:1;
 	text-align:center;
 	width:100px;
 }
 
-ul li a {
+#menu ul li a {
 	color:#fff;
 	font-size:.9em;
 	text-transform:uppercase;
 }
 
-/* Flexboxes */
 .flexbox-wrap {
 	display:flex;
 	flex-flow: row wrap;
@@ -53,7 +62,7 @@ ul li a {
 	text-align: center;
 	vertical-align: middle;
 	flex-grow: 1;
-	width: 100px;
+	width: 150px;
 	align-items: center;
 	justify-content: center;
 }
@@ -63,10 +72,18 @@ ul li a {
 	transition: all 2s;
 }
 .box-hover:hover {
-	transition: all 2s;
+	transition: all 1s;
 	background: #b2b2b2; 
-	color: #1c1c1c;
-	font-weight: bold;
+	color: black;
+	font-weight: bolder;
+}
+.job_title.box-hover:hover {
+	letter-spacing: 2px;
+}
+
+/* Utils */
+.pull-right {
+	float: right;
 }
 
 header div:nth-child(1) {
@@ -102,7 +119,7 @@ h1, p {
 	padding:80px;
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width:840px) {
 
 	header {
 		justify-content: space-around;
@@ -117,9 +134,33 @@ h1, p {
 		margin: 0 auto;
 	}
 
+	.company,.course,.date {
+		font-size: 0.6em;
+	}
+
+	.item h3 {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.item .company,.course {
+		flex-grow: 2;
+	}
+
+	.item .date {
+		float:none;
+		text-align: right;
+	}
 }
 
 @media only screen and (max-width:542px) {
+	
+	.company,.course {
+		font-size: 0.6em;
+	}
+	.date{
+		display: none;
+	}
 
 	header div:nth-child(1) {
 		margin: 0 auto;
